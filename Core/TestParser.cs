@@ -20,7 +20,7 @@ namespace DataParserProfTest.Core
 
         public TestParser()
         {
-            service = new SheetsService(new BaseClientService.Initializer() { HttpClientInitializer = GoogleWebAuthorizationBroker.AuthorizeAsync(new ClientSecrets { ClientId = "977788122907-rrun02hhc225st0aaorhphs336jod6os.apps.googleusercontent.com", ClientSecret = "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" }, Scopes, "user", CancellationToken.None, new FileDataStore("myToken")).Result, ApplicationName = "OProfTest" });
+            service = new SheetsService(new BaseClientService.Initializer() { HttpClientInitializer = GoogleWebAuthorizationBroker.AuthorizeAsync(new ClientSecrets { ClientId = "", ClientSecret = "" }, Scopes, "user", CancellationToken.None, new FileDataStore("myToken")).Result, ApplicationName = "OProfTest" });
         }
 
         private void DeleteRowFromSpreadsheet(Test test, int endIndex)
